@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Pmclain_Stripe extension
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the OSL 3.0 License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * https://opensource.org/licenses/osl-3.0.php
+ *
+ * @category  Pmclain
+ * @package   Pmclain_Stripe
+ * @copyright Copyright (c) 2017-2018
+ * @license   Open Software License (OSL 3.0)
+ */
+--> 
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+  <default>
+    <payment>
+      <magento_sanalpos>
+        <!-- <model>SanalposFacade</model> -->
+        <model>Magento\Sanalpos\Model\PaymentMethod</model>
+        <active>1</active>
+        <title>Sanalpos Credit Card</title>
+        <is_gateway>1</is_gateway>
+        <payment_action>sale</payment_action>
+        <can_use_checkout>1</can_use_checkout>
+        <can_authorize>1</can_authorize>
+        <can_capture>1</can_capture>
+        <can_cancel>1</can_cancel>
+        <can_review_payment>1</can_review_payment>
+        <can_deny_payment>1</can_deny_payment>
+        <cctypes>AE,VI,MC,DI</cctypes>
+        <useccv>1</useccv>
+        <order_status>new</order_status>
+        <debug>1</debug>
+        <currency>TL</currency>
+        <test_mode>1</test_mode>
+        <verify_3dsecure>0</verify_3dsecure>
+      </magento_sanalpos>
+    </payment>
+  </default>
+</config>
